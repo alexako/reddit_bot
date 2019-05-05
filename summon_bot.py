@@ -49,7 +49,8 @@ while True:
 
         if query in comment.body:
             #Build message
-            trig_message = comment.author.name + " has mentioned the trigger!"
+            trig_message = comment.author.name + " has mentioned the trigger!<br>"
+            trig_message += comment.body
             comment_header = "Matching Comments:"
             message = """<p id="trigger_alert">
                 <div id="query">Searched for: '%s'
